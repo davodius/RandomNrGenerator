@@ -1,17 +1,38 @@
-let x = Math.floor(Math.random() * 10 + 1);
-console.log(x);
+/* let x = Math.floor(Math.random() * 10 + 1); - KOMIHÅG
+console.log(x); */
 
 // npm install prompt-sync - kom ihåg att denna var tvungen att installeras för att följande stycke skulle fungera.
 const prompt = require("prompt-sync")();
 
-console.log("Guess a number between 1 and 10 and press enter ");
+console.log("Would you like to play y/n? ");
+
+while (true) {
+  let choice = prompt();
+
+  switch (choice) {
+    case "y":
+      console.log("CHOSE Y ");
+      break;
+
+    case "n":
+      console.log("The program has been exited. ");
+      process.exit();
+      break;
+
+    default:
+      console.log("You have to write y or n for yes or no. ");
+      break;
+  }
+}
+
+/* console.log("Guess a number between 1 and 10 and press enter ");
 while (true) {
   try {
     let guessednumber = prompt();
     //console.log(`Hello, ${guessednumber}!`);
 
     if (guessednumber == x) {
-      console.log(`${guessednumber} You are right on the money.`);
+      console.log(`${guessednumber} You are right on the money.`); - KOMIHÅG
       break;
     }
 
@@ -25,7 +46,7 @@ while (true) {
   } catch (error) {
     console.log("Make sure you wrote a number.");
   }
-}
+} */
 /*
 
 
