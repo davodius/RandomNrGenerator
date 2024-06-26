@@ -4,10 +4,8 @@ console.log(x);
 // npm install prompt-sync - kom ihåg att denna var tvungen att installeras för att följande stycke skulle fungera.
 const prompt = require("prompt-sync")();
 
-console.log("Would you like to play y/n? ");
-
 while (true) {
-  console.log("Would you like to play again y/n? ");
+  console.log("Press the charachter of your choicce to play y/n? ");
   const choice = prompt();
 
   switch (choice) {
