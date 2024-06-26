@@ -1,16 +1,31 @@
-/* let x = Math.floor(Math.random() * 10 + 1);
+let x = Math.floor(Math.random() * 10 + 1);
 console.log(x);
-
-console.log("Guess the number");
- */
 
 // npm install prompt-sync - kom ihåg att denna var tvungen att installeras för att följande stycke skulle fungera.
 const prompt = require("prompt-sync")();
 
-const username = prompt("What's your name? ");
-console.log(`Hello, ${username}!`);
-// You can place the rest of your code here
+console.log("Guess a number between 1 and 10 and press enter ");
+while (true) {
+  try {
+    let guessednumber = prompt();
+    //console.log(`Hello, ${guessednumber}!`);
 
+    if (guessednumber == x) {
+      console.log(`${guessednumber} You are right on the money.`);
+      break;
+    }
+
+    if (isNaN(guessednumber)) {
+      throw new Error("Det måste vara en siffra");
+    } else if (guessednumber > x) {
+      console.log(`${guessednumber} Is too big guess again.`);
+    } else if (guessednumber < x) {
+      console.log(`${guessednumber} Is too small guess again.`);
+    }
+  } catch (error) {
+    console.log("Make sure you wrote a number.");
+  }
+}
 /*
 
 
@@ -29,6 +44,8 @@ console.log(`Hello, ${username}!`);
 
 
 */
+
+//console.log(`Hello, ${guessednumber}!`); - kom ihåg ${guessednumber} så hämtar du det tidigare sparade värdet.
 
 // Denna funkade - Den behövde ej - npm install prompt-sync
 
