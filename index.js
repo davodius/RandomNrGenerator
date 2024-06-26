@@ -14,7 +14,8 @@ while (true) {
       while (true) {
         try {
           let guessednumber = prompt();
-          //console.log(`Hello, ${guessednumber}!`);
+          // console.clear(); Kan behövas ifall prompt inte vill overwritas
+          // input const choice => let guessednumber
 
           if (guessednumber == x) {
             console.log(`${guessednumber} You are right on the money.`);
@@ -46,51 +47,9 @@ while (true) {
   }
 }
 
-/* console.log("Guess a number between 1 and 10 and press enter ");
-while (true) {
-  try {
-    let guessednumber = prompt();
-    //console.log(`Hello, ${guessednumber}!`);
-
-    if (guessednumber == x) {
-      console.log(`${guessednumber} You are right on the money.`); - KOMIHÅG
-      break;
-    }
-
-    if (isNaN(guessednumber)) {
-      throw new Error("Det måste vara en siffra");
-    } else if (guessednumber > x) {
-      console.log(`${guessednumber} Is too big guess again.`);
-    } else if (guessednumber < x) {
-      console.log(`${guessednumber} Is too small guess again.`);
-    }
-  } catch (error) {
-    console.log("Make sure you wrote a number.");
-  }
-} */
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
-
 //console.log(`Hello, ${guessednumber}!`); - kom ihåg ${guessednumber} så hämtar du det tidigare sparade värdet.
 
 // Denna funkade - Den behövde ej - npm install prompt-sync
-
 /* const readline = require("readline");
 const rl = readline.createInterface({
   input: process.stdin,
@@ -102,22 +61,7 @@ rl.question("What's your name? ", (username) => {
   rl.close();
 }); */
 
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-*/
 // Simpel js server för start i webbläsare
-
 /* const http = require("http");
 
 const hostname = "127.0.0.1";
