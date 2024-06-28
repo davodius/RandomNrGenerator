@@ -90,3 +90,15 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 }); */
+
+/* const prompt = require("prompt-sync")();
+
+let count = 0;
+while (true) {
+  console.log("press a letter ");
+  const choice = prompt();
+  count++;
+
+  console.log(`you have pressed a letter, ${count} times`);
+}
+ */
