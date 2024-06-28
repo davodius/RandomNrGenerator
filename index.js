@@ -4,6 +4,9 @@ console.log(x);
 // npm install prompt-sync - kom ihåg att denna var tvungen att installeras för att följande stycke skulle fungera.
 const prompt = require("prompt-sync")();
 
+let repeatsOfGameCounter = 0;
+let guessedTheWrongNumber = 0;
+
 while (true) {
   console.log("Press the charachter of your choicce to play y/n? ");
   const choice = prompt();
@@ -11,6 +14,9 @@ while (true) {
   switch (choice) {
     case "y":
       console.log("Guess a number between 1 and 10 and press enter ");
+      if (repeatsOfGameCounter > 0) {
+        console.log(`You have played this game ${repeatsOfGameCounter} times `);
+      }
       while (true) {
         try {
           let guessednumber = prompt();
@@ -18,7 +24,10 @@ while (true) {
           // input const choice => let guessednumber
 
           if (guessednumber == x) {
-            console.log(`${guessednumber} You are right on the money.`);
+            console.log(
+              `${guessednumber} You are right on the money and it took you ${guessedTheWrongNumber} times `
+            );
+            repeatsOfGameCounter++;
 
             break;
           }
@@ -27,8 +36,10 @@ while (true) {
             throw new Error("Det måste vara en siffra");
           } else if (guessednumber > x) {
             console.log(`${guessednumber} Is too big guess again.`);
+            guessedTheWrongNumber++;
           } else if (guessednumber < x) {
             console.log(`${guessednumber} Is too small guess again.`);
+            guessedTheWrongNumber++;
           }
         } catch (error) {
           console.log("Make sure you wrote a number.");
