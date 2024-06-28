@@ -8,14 +8,16 @@ let repeatsOfGameCounter = 0;
 let guessedTheWrongNumber = 0;
 
 while (true) {
-  console.log("Press the charachter of your choicce to play y/n? ");
+  console.log("Press the charachter of your choice to play y/n? ");
   const choice = prompt();
 
   switch (choice) {
     case "y":
       console.log("Guess a number between 1 and 10 and press enter ");
       if (repeatsOfGameCounter > 0) {
-        console.log(`You have played this game ${repeatsOfGameCounter} times `);
+        console.log(
+          `This is your ${repeatsOfGameCounter} time playing this game `
+        );
       }
       while (true) {
         try {
@@ -24,8 +26,9 @@ while (true) {
           // input const choice => let guessednumber
 
           if (guessednumber == x) {
+            guessedTheWrongNumber++;
             console.log(
-              `${guessednumber} You are right on the money and it took you ${guessedTheWrongNumber} times `
+              `${guessednumber} You are right on the money and you did it on yout ${guessedTheWrongNumber} attempt `
             );
             repeatsOfGameCounter++;
 
