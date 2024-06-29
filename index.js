@@ -102,3 +102,47 @@ while (true) {
   console.log(`you have pressed a letter, ${count} times`);
 }
  */
+/* let price = "banana";
+let message = isNaN(price)
+  ? "write a number"
+  : price >= 18
+  ? "much money"
+  : "little money";
+
+console.log(message);
+ */
+
+// tried to use double negative
+// for checking after numbers while asking for letters
+/* let price = 21 + "banana";
+let message = isNaN(price)
+  ? "what are you adding?"
+  : "you were not supposed to use a number here";
+
+console.log(message + price);
+ */
+
+// Function for checking for letters
+// using ternerys bc phunny
+/* function isNotSingleLetterOrWordOrWordWithNumbers(str) {
+  const letterRegex = /^[a-zA-ZåäöÅÄÖ]$/;
+  const wordRegex = /^[a-zA-ZåäöÅÄÖ]+$/;
+  const wordWithNumbersRegex = /^[a-zA-ZåäöÅÄÖ0-9]+$/;
+
+  return letterRegex.test(str) ? false : 
+         wordRegex.test(str) ? false : 
+         (wordWithNumbersRegex.test(str) && /[0-9]/.test(str)) ? false : 
+         true;
+}
+
+// Example usage:
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('a'));        // false (single letter)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('å'));        // false (single letter)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('hello'));    // false (word)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('hällo'));    // false (word with Scandinavian letters)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('hello123')); // false (word with numbers)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('hällo123')); // false (word with Scandinavian letters and numbers)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('123'));      // true (not a word)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers('hello!'));   // true (contains punctuation)
+console.log(isNotSingleLetterOrWordOrWordWithNumbers(' '));        // true (whitespace)
+ */
